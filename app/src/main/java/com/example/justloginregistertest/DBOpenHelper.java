@@ -34,6 +34,9 @@ public class DBOpenHelper extends SQLiteOpenHelper {
                 "_id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "name TEXT," +
                 "password TEXT)");
+        //AUTOINCREMENT自动创建主键，从1开始
+        //execSQL用来执行SQL语句，不返回结果
+        // execSQL方法除了可执行Select语句外还可执行其它SQL语句（如Update、Insert、Delete等）
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){

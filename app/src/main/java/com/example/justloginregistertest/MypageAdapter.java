@@ -16,8 +16,10 @@ public class MypageAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         if (position == 0) {
             return new FirstFragment();
-        } else{
+        }else if(position == 1){
             return new InfoFragment();
+        }else{
+            return null;
         }
     }
 
