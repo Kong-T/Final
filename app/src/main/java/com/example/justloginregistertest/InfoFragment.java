@@ -43,12 +43,12 @@ public class InfoFragment extends Fragment implements Runnable,AdapterView.OnIte
 
     //用变量去存储，方便后续修改；
     private final String TAG = "InformationSearch";
-    ListView listview;
-    List<String> list;
-    InfoFragment context = null;
-    Handler handler;
-    int k;
-    String strtitle;
+    private ListView listview;
+    private List<String> list;
+    private InfoFragment context = null;
+    private Handler handler;
+    private int k;
+    private String strtitle;
 
     public InfoFragment() {
         // Required empty public constructor
@@ -157,9 +157,5 @@ public class InfoFragment extends Fragment implements Runnable,AdapterView.OnIte
         Intent web = new Intent(Intent.ACTION_VIEW, Uri.parse(URL));
         startActivity(web);
     }
-
-
-
-
 
 }

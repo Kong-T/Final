@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">JustLoginRegisterTest</string>
+    <string name="app_name">ToSchool</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Hello Blank Fragment</string>
+    <string name="input">Say what you want to say</string>
 </resources>

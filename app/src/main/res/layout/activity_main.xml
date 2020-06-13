@@ -7,13 +7,13 @@
     tools:context=".MainActivity">
 
 
-    <Button
-        android:id="@+id/bt_main_logout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="退出登录"
-        android:textColor="@color/colorAccent"
-        tools:ignore="MissingConstraints" />
+<!--    <Button-->
+<!--        android:id="@+id/bt_main_logout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="退出登录"-->
+<!--        android:textColor="@color/colorAccent"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="wrap_content"
@@ -21,18 +21,19 @@
         android:orientation="vertical"
         tools:ignore="MissingConstraints" />
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayout"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        style="@style/MyCustomTabLayout"
+        android:layout_width="match_parent"
 
-            style="@style/MyCustomTabLayout"
-            app:tabMode="fixed"
-            tools:ignore="MissingConstraints" />
+        android:layout_height="40dp"
+        app:tabMode="fixed"
+        tools:ignore="MissingConstraints" />
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewpager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="45dp" />
 
         ></androidx.constraintlayout.widget.ConstraintLayout>

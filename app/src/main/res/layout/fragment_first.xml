@@ -7,8 +7,31 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/input"
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:width="200dp"
+        android:minLines="3"
+        android:textSize="20dp"
+        android:background="@drawable/edittext"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:layout_marginTop="100dp"
+        android:id="@+id/enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter"
+        android:layout_gravity="center"/>
 
 </FrameLayout>

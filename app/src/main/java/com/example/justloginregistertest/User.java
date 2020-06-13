@@ -1,7 +1,5 @@
 package com.example.justloginregistertest;
-/**
- * Created by littlecurl 2018/6/24
- */
+
 public class User {
     private String name;            //用户名
     private String password;        //密码
