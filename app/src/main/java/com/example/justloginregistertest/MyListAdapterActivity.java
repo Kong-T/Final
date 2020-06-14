@@ -1,6 +1,9 @@
 package com.example.justloginregistertest;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,6 +50,10 @@ public class MyListAdapterActivity extends ArrayAdapter {
         mess.setText(map.get("message"));
         time.setText(map.get("messtime"));
 
+
+
         return itemView;
     }
+
+
 }

@@ -2,6 +2,7 @@ package com.example.justloginregistertest;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -32,27 +33,25 @@ public class messInfoActivity extends AppCompatActivity {
         tinfotime = findViewById(R.id.infotime);
         tinfoname = findViewById(R.id.infoname);
 
-        getdbMess();
+
+        Intent fragIntent = getIntent();
+        String itemname = fragIntent.getStringExtra("itemname");
+        String itemtime = fragIntent.getStringExtra("itemtime");
+        String itemmess = fragIntent.getStringExtra("itemmess");
+
+        tinfoname.setText(itemname);
+        tinfotime.setText(itemtime);
+        tinfomess.setText(itemmess);
+
+        Log.i("itemname",itemname);
+        Log.i("itemtime",itemtime);
+        Log.i("itemmess",itemmess);
 
 
     }
 
 
-    public void getdbMess() {
-        ArrayList<Mess> data = dbOpenHelper.getALLmess();
-        Log.i("data", data.toString());
-        messlist = new ArrayList<HashMap<String, String>>();
-        for (int i = 0; i < data.size(); i++) {
-            Mess mess = data.get(i);
-            String name = mess.getName();
-            String message = mess.getMess();
-            String messtime = mess.getTime();
-            HashMap<String, String> map = new HashMap<String, String>();
-            map.put("name", name);
-            map.put("message", message);
-            map.put("messtime", messtime);
-            messlist.add(map);
-            Log.i("getdbmess", "success");
-        }
-    }
+
+
+
 }
