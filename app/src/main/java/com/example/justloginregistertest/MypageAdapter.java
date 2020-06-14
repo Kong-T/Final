@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 public class MypageAdapter extends FragmentPagerAdapter {
 
-    private String[] title = new String[]{"First","Second"};
+    private String[] title = new String[]{"主页","发现","校园信息"};
 
     public MypageAdapter(FragmentManager manager){
         super(manager);
@@ -17,15 +17,15 @@ public class MypageAdapter extends FragmentPagerAdapter {
         if (position == 0) {
             return new FirstFragment();
         }else if(position == 1){
-            return new InfoFragment();
+            return new ShowFragment();
         }else{
-            return null;
+            return new InfoFragment();
         }
     }
 
     @Override
     public int getCount() {
-        return 2;
+        return 3;
     }
 
     @Override

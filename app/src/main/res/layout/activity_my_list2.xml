@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MyList2Activity">
+
+    <TextView
+        android:id="@+id/itemtitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:paddingLeft="40px"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/itemDetail"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="left"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="50px"
+        android:paddingRight="50px"
+        android:text="TextView"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/itemtime"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="40px"
+        android:textSize="10sp"
+        android:textColor="#2F4F4F"
+        android:layout_marginTop="10dp"
+        android:gravity="right|bottom"
+        android:text="TextView" />
+
+</LinearLayout>

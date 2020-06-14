@@ -26,10 +26,8 @@ public class loginActivity extends AppCompatActivity implements View.OnClickList
 
     private DBOpenHelper mDBOpenHelper;
     private TextView mTvLoginactivityRegister;
-    //private RelativeLayout mRlLoginactivityTop;
     private EditText mEtLoginactivityUsername;
     private EditText mEtLoginactivityPassword;
-   // private LinearLayout mLlLoginactivityTwo;
     private Button mBtLoginactivityLogin;
 
 
@@ -48,10 +46,8 @@ public class loginActivity extends AppCompatActivity implements View.OnClickList
         // 初始化控件
         mBtLoginactivityLogin = findViewById(R.id.bt_loginactivity_login);
         mTvLoginactivityRegister = findViewById(R.id.tv_loginactivity_register);
-       // mRlLoginactivityTop = findViewById(R.id.rl_loginactivity_top);
         mEtLoginactivityUsername = findViewById(R.id.et_loginactivity_username);
         mEtLoginactivityPassword = findViewById(R.id.et_loginactivity_password);
-       // mLlLoginactivityTwo = findViewById(R.id.ll_loginactivity_two);
 
         // 设置点击事件监听器
         mBtLoginactivityLogin.setOnClickListener(this);

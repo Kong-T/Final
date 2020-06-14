@@ -7,13 +7,6 @@
     tools:context=".MainActivity">
 
 
-<!--    <Button-->
-<!--        android:id="@+id/bt_main_logout"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="退出登录"-->
-<!--        android:textColor="@color/colorAccent"-->
-<!--        tools:ignore="MissingConstraints" />-->
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="wrap_content"
@@ -36,4 +29,6 @@
         android:layout_height="match_parent"
         android:layout_marginTop="45dp" />
 
-        ></androidx.constraintlayout.widget.ConstraintLayout>
+        >
+
+</androidx.constraintlayout.widget.ConstraintLayout>

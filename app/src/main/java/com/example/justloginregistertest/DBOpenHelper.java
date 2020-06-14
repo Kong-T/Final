@@ -65,6 +65,20 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         db.execSQL(sql,new Object[]{name,mess,time});
     }
 
+    //获取数据库里的留言板信息
+    public ArrayList<Mess> getALLmess(){
+
+        ArrayList<Mess> list = new ArrayList<Mess>();
+        Cursor cursor = db.query("message",null,null,null,null,null,"time DESC");
+        while(cursor.moveToNext()){
+            String time = cursor.getString(cursor.getColumnIndex("time"));
+            String mess = cursor.getString(cursor.getColumnIndex("mess"));
+            String name = cursor.getString(cursor.getColumnIndex("name"));
+            list.add(new Mess(name,mess,time));
+        }
+        return list;
+    }
+
 
     //用于登录匹配信息
     public ArrayList<User> getAllData(){

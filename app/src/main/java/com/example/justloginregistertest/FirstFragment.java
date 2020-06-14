@@ -58,7 +58,7 @@ public class FirstFragment extends Fragment {
 
     public void ClickMess() {
         String edmess = edmessage.getText().toString();
-        String curDate = (new SimpleDateFormat("yyyy-MM-dd")).format(new Date());
+        String curDate = (new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")).format(new Date());
         Intent intent = getActivity().getIntent();
         String name = intent.getStringExtra("name");
         Log.i("curDate",curDate);
@@ -69,6 +69,7 @@ public class FirstFragment extends Fragment {
             Log.i("dbOPen","已加入");
             Toast.makeText(getActivity(),  "成功提交", Toast.LENGTH_SHORT).show();
         }
+        startActivity(new Intent(getActivity(), MainActivity.class));
 
     }
 

@@ -97,7 +97,7 @@ public class InfoFragment extends Fragment implements Runnable,AdapterView.OnIte
 //        final List<String> rateList = new ArrayList<String>();
         try {
 
-            Thread.sleep(2000);
+            Thread.sleep(1000);
             SharedPreferences sharedPreferences = getActivity().getSharedPreferences ("infoFrag", Activity.MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
             Document doc = Jsoup.connect("http://www.swufe.edu.cn/index/xsjz.htm").get();
