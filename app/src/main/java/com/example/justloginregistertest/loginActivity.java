@@ -1,14 +1,13 @@
 package com.example.justloginregistertest;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.database.sqlite.SQLiteOpenHelper;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -80,9 +79,13 @@ public class loginActivity extends AppCompatActivity implements View.OnClickList
                     }
                     if (match) {
                         Toast.makeText(this, "登录成功", Toast.LENGTH_SHORT).show();
+                        SharedPreferences SPlogin = getSharedPreferences ("currentuser", Activity.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = SPlogin.edit();
+                        editor.putString("curusername",name);
+                        editor.commit();
                         Intent intent = new Intent(this, MainActivity.class);
-                        intent.putExtra("Activityname","Login");
-                        intent.putExtra("name",name);
+//                        intent.putExtra("Activityname","Login");
+//                        intent.putExtra("name",name);
                         startActivity(intent);
                         finish();//销毁此Activity
                     } else {

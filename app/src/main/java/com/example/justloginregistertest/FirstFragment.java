@@ -1,10 +1,9 @@
 package com.example.justloginregistertest;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,8 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -59,8 +59,8 @@ public class FirstFragment extends Fragment {
     public void ClickMess() {
         String edmess = edmessage.getText().toString();
         String curDate = (new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")).format(new Date());
-        Intent intent = getActivity().getIntent();
-        String name = intent.getStringExtra("name");
+        SharedPreferences SPlogin = getActivity().getSharedPreferences ("currentuser", Activity.MODE_PRIVATE);
+        String name = SPlogin.getString("curusername","");
         Log.i("curDate",curDate);
         Log.i("edmess",edmess);
         Log.i("intent_name",name);

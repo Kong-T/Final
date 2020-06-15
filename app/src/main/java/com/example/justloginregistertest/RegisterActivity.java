@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -65,7 +63,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
                         //将用户名和密码加入到数据库中
                         DBOpenHelper.add(username, password);
-                        Intent intent2 = new Intent(this, MainActivity.class);
+                        Intent intent2 = new Intent(this, loginActivity.class);
                         intent2.putExtra("Register","register");
                         intent2.putExtra("username",username);
                         startActivity(intent2);

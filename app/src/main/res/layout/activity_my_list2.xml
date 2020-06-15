@@ -7,13 +7,45 @@
     android:orientation="vertical"
     tools:context=".MyList2Activity">
 
-    <TextView
-        android:id="@+id/itemtitle"
-        android:layout_width="fill_parent"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="22sp"
-        android:paddingLeft="40px"
-        android:text="TextView" />
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:src="@drawable/ic_user" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+        <TextView
+            android:id="@+id/itemtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:paddingLeft="20px"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/itemtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20px"
+            android:textSize="10sp"
+            android:textColor="#2F4F4F"
+            android:layout_marginTop="10dp"
+            android:text="TextView" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
 
     <TextView
         android:id="@+id/itemDetail"
@@ -25,16 +57,6 @@
         android:paddingLeft="50px"
         android:paddingRight="50px"
         android:text="TextView"
-        android:textSize="18sp" />
-    <TextView
-        android:id="@+id/itemtime"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:paddingRight="40px"
-        android:textSize="10sp"
-        android:textColor="#2F4F4F"
-        android:layout_marginTop="10dp"
-        android:gravity="right|bottom"
-        android:text="TextView" />
+        android:textSize="15sp" />
 
 </LinearLayout>

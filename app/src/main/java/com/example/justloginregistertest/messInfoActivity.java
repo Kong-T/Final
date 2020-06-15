@@ -1,26 +1,24 @@
 package com.example.justloginregistertest;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ListView;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class messInfoActivity extends AppCompatActivity {
+public class messInfoActivity extends AppCompatActivity implements View.OnClickListener{
 
     private DBOpenHelper dbOpenHelper;
     private TextView tinfoname;
     private TextView tinfotime;
     private TextView tinfomess;
+    private ImageView imessinfoback;
     ArrayList<HashMap<String, String>> messlist;
 
 
@@ -32,7 +30,8 @@ public class messInfoActivity extends AppCompatActivity {
         tinfomess = findViewById(R.id.infoDetail);
         tinfotime = findViewById(R.id.infotime);
         tinfoname = findViewById(R.id.infoname);
-
+        imessinfoback = findViewById(R.id.messinfo_back);
+        imessinfoback.setOnClickListener(this);
 
         Intent fragIntent = getIntent();
         String itemname = fragIntent.getStringExtra("itemname");
@@ -51,7 +50,13 @@ public class messInfoActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.messinfo_back) {
+            Intent intent1 = new Intent(messInfoActivity.this, MainActivity.class);
+            intent1.putExtra("id",1);
+            startActivity(intent1);
 
-
-
+        }
+    }
 }

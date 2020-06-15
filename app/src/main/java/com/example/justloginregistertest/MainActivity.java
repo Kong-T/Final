@@ -1,16 +1,16 @@
 package com.example.justloginregistertest;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
@@ -25,22 +25,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 //        initView();
         PageView();
+        int id = getIntent().getIntExtra("id", 0);
+        if (id == 1) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.show_fragment,new ShowFragment())
+                    .addToBackStack(null)
+                    .commit();
+        }
 
     }
 
-//    private void initView() {
-//        // 初始化控件对象
-//        Button mBtMainLogout = findViewById(R.id.bt_main_logout);
-//        // 绑定点击监听器
-//        mBtMainLogout.setOnClickListener(this);
-//    }
 
     public void onClick(View view) {
-//        if (view.getId() == R.id.bt_main_logout) {
-//            Intent intent = new Intent(this, loginActivity.class);
-//            startActivity(intent);
-//            finish();
-//        }
+
     }
 
     //菜单项
@@ -60,6 +58,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Log.i("menu","menu");
             Intent intent = new Intent(this, loginActivity.class);
             startActivity(intent);
+            finish();
+        }
+        if ((item.getItemId()==R.id.usercenter)){
+//            Intent intent = getIntent();
+//            String name = intent.getStringExtra("name");
+
+            SharedPreferences SPlogin = getSharedPreferences ("currentuser", Activity.MODE_PRIVATE);
+            String name = SPlogin.getString("curusername","");
+            Intent intent_gouc = new Intent(this, usercenterActivity.class);
+            intent_gouc.putExtra("usercentername",name);
+            startActivity(intent_gouc);
             finish();
         }
 

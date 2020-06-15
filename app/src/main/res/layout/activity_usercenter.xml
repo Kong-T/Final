@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".messInfoActivity">
+    tools:context=".usercenterActivity">
     <RelativeLayout
         android:id="@+id/rl_registeractivity_top"
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
         android:background="@color/color_minefragment_top">
 
         <ImageView
-            android:id="@+id/messinfo_back"
+            android:id="@+id/usercenter_back"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_centerVertical="true"
@@ -29,7 +29,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="40dp"
             android:layout_toRightOf="@+id/iv_registeractivity_back"
-            android:text="详情"
+            android:text="个人中心"
             android:textColor="#fff"
             android:textSize="20dp" />
     </RelativeLayout>
@@ -44,8 +44,8 @@
         <ImageView
             android:id="@+id/imageView"
             android:paddingLeft="10dp"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:src="@drawable/ic_user" />
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
@@ -53,38 +53,23 @@
             android:orientation="vertical"
             >
             <TextView
-                android:id="@+id/infoname"
+                android:id="@+id/usercenter_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="15sp"
+                android:layout_marginTop="20dp"
+                android:textSize="30sp"
                 android:paddingLeft="50px"
                 android:text="TextView" />
 
-            <TextView
-                android:id="@+id/infotime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="50px"
-                android:textSize="10sp"
-                android:textColor="#2F4F4F"
-                android:layout_marginTop="10dp"
-                android:text="TextView" />
+
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 
-    <TextView
-        android:id="@+id/infoDetail"
+    <ListView
+        android:id="@+id/usercenter_infolist"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_gravity="left"
-        android:layout_weight="1"
-        android:layout_marginTop="10dp"
-        android:paddingLeft="50px"
-        android:paddingRight="50px"
-        android:text="TextView"
-        android:textSize="15sp" />
-
+        android:layout_height="match_parent" />
 
 </LinearLayout>

@@ -6,7 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import java.sql.Date;
 import java.util.ArrayList;
 
 
@@ -65,8 +64,26 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         db.execSQL(sql,new Object[]{name,mess,time});
     }
 
+    public void messagedelete(String name, String mess, String time){
+        db.execSQL("DELETE FROM message WHERE name = AND mess = AND time =" + name + mess + time);
+    }
+
+    //用于个人中心的信息检索
+    public ArrayList<Mess> getusermess(String username){
+
+        ArrayList<Mess> list = new ArrayList<Mess>();
+        Cursor cursor = db.query("message",null,"name = ?" , new String[]{username},null,null,"time DESC");
+        while(cursor.moveToNext()){
+            String time = cursor.getString(cursor.getColumnIndex("time"));
+            String mess = cursor.getString(cursor.getColumnIndex("mess"));
+            String name = cursor.getString(cursor.getColumnIndex("name"));
+            list.add(new Mess(name,mess,time));
+        }
+        return list;
+    }
+
     //获取数据库里的留言板信息
-    public ArrayList<Mess> getALLmess(){
+    public ArrayList<Mess> getAllmess(){
 
         ArrayList<Mess> list = new ArrayList<Mess>();
         Cursor cursor = db.query("message",null,null,null,null,null,"time DESC");
@@ -78,6 +95,7 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         }
         return list;
     }
+
 
 
     //用于登录匹配信息
