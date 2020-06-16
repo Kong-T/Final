@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="50dp"
             android:layout_toRightOf="@+id/iv_registeractivity_back"
             android:text="个人中心"
             android:textColor="#fff"

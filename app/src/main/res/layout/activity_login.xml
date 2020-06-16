@@ -15,15 +15,6 @@
         android:layout_height="60dp"
         android:background="@color/color_minefragment_top">
 
-        <ImageView
-            android:id="@+id/iv_loginactivity_back"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/ic_left_back"
-            android:clickable="true"
-            android:onClick="onClick" />
 
         <TextView
             android:id="@+id/tv_loginactivity_login"
@@ -31,7 +22,6 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@+id/iv_loginactivity_back"
             android:text="登录"
             android:textColor="#fff"
             android:textSize="18dp" />

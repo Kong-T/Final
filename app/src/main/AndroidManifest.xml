@@ -12,9 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".usercenterActivity"></activity>
-        <activity android:name=".messInfoActivity" />
-        <activity android:name=".loginActivity">
+        <activity android:name=".StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,6 +22,11 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".usercenterActivity" />
+        <activity android:name=".messInfoActivity" />
+        <activity android:name=".loginActivity">
+
         </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainActivity" />

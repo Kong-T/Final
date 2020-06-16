@@ -70,6 +70,7 @@ public class FirstFragment extends Fragment {
             Toast.makeText(getActivity(),  "成功提交", Toast.LENGTH_SHORT).show();
         }
         startActivity(new Intent(getActivity(), MainActivity.class));
+        getActivity().finish();
 
     }
 

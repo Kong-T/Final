@@ -25,13 +25,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
-        <TextView
-            android:id="@+id/itemtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:paddingLeft="20px"
-            android:text="TextView" />
+
+            <TextView
+                android:id="@+id/itemtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:paddingLeft="20px"
+                android:text="TextView"
+                android:textSize="15sp" />
 
         <TextView
             android:id="@+id/itemtime"
@@ -40,7 +42,7 @@
             android:paddingLeft="20px"
             android:textSize="10sp"
             android:textColor="#2F4F4F"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:text="TextView" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
