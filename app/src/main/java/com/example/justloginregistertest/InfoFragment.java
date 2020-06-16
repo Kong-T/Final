@@ -5,23 +5,18 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.os.Handler;
 import android.os.Message;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -29,8 +24,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -98,7 +91,7 @@ public class InfoFragment extends Fragment implements Runnable,AdapterView.OnIte
         try {
 
             Thread.sleep(1000);
-            SharedPreferences sharedPreferences = getActivity().getSharedPreferences ("infoFrag", Activity.MODE_PRIVATE);
+                SharedPreferences sharedPreferences = getActivity().getSharedPreferences ("infoFrag", Activity.MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
             Document doc = Jsoup.connect("http://www.swufe.edu.cn/index/xsjz.htm").get();
             final List<String> infoList = new ArrayList<String>();
